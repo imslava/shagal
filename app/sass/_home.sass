@@ -279,24 +279,27 @@
 	background: #eee
 	color: #fff
 	position: relative
-	&:before
-		content: ''
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		height: 70px
-		background: url(../img/src/svg/menu-top.svg) no-repeat top center
-		z-index: 2
-	&:after
-		content: ''
-		position: absolute
-		bottom: 0
-		left: 0
-		right: 0
-		height: 125px
-		background: url(../img/src/svg/menu-bottom.svg) no-repeat top center
-		z-index: 2
+	z-index: 2
+	-webkit-mask-image: url(../img/src/svg/menu-mask.svg)
+	mask-composite: add
+	// &:before
+	// 	content: ''
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0
+	// 	right: 0
+	// 	height: 70px
+	// 	background: url(../img/src/svg/menu-top.svg) no-repeat top center
+	// 	z-index: 2
+	// &:after
+	// 	content: ''
+	// 	position: absolute
+	// 	bottom: 0
+	// 	left: 0
+	// 	right: 0
+	// 	height: 125px
+	// 	background: url(../img/src/svg/menu-bottom.svg) no-repeat top center
+	// 	z-index: 2
 	.container
 		height: 100%
 		@include flex
@@ -334,8 +337,7 @@
 			margin-top: auto
 			margin-bottom: 90px
 			h2
-				font-family: 'Anglecia Pro Display'
-				font-weight: 700
+				font-weight: 900
 				font-size: 60px
 				margin-bottom: 20px
 			p
@@ -390,11 +392,13 @@
 			height: 100%
 
 .tryFirst
-	padding: 160px 0 100px
+	padding: 80px 0 100px
+	position: relative
+	z-index: 1
 	&-top
 		@include flex
-		align-items: flex-end
-		margin-bottom: 60px
+		align-items: flex-start
+		margin-bottom: 70px
 		.title
 			margin-bottom: 0
 	&-slider
@@ -430,16 +434,17 @@
 			&:before
 				left: 94px
 	&-item
-		width: 300px !important
-		margin-right: 20px
+		width: 260px !important
+		margin-right: 60px
 		&__img
 			width: 100%
-			height: 300px
+			height: 260px
 			background-size: cover
 			background-position: center center
 			background-repeat: no-repeat
-			border-radius: 10px
-			margin-bottom: 30px
+			border-radius: 20px
+			margin-bottom: 20px
+			box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.11)
 		p
 			font-size: 20px
 			line-height: 33px
@@ -460,6 +465,7 @@
 
 .blot-5
 	position: absolute
-	top: -160px
-	right: -90px
+	top: -210px
+	right: -235px
 	z-index: -1
+	filter: drop-shadow(0px 3px 6px rgba(0,0,0,.3))
