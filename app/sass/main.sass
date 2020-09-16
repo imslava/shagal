@@ -227,8 +227,19 @@ body
 		opacity: 1
 
 .chocoHour
-	padding: 80px 0 100px
-	background: #EEECF4 url(../img/src/chocoHour.jpg) no-repeat top 100px left
+	padding: 160px 0 100px
+	height: 970px
+	background: linear-gradient(90deg, #261817 0%, #412D26 27.91%, #1F1110 51.21%, #1F1110 92.18%)
+	color: #ffffff
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0	
+		right: 0
+		bottom: 0
+		background: url(../img/src/svg/chocohour-top.svg) no-repeat top center
 	.container
 		@include flex
 		align-items: center
@@ -236,8 +247,6 @@ body
 		width: 100%
 		max-width: 540px
 		margin-left: auto
-		.title
-			color: #785954
 	&-row
 		@include flex
 		align-items: center
@@ -245,11 +254,9 @@ body
 	&-link
 		display: block
 		margin: 0 auto 7px
-		color: #414141
-		border-bottom: 1px solid #414141
+		color: #fff
+		border-bottom: 1px solid #fff
 		font-size: 22px
-		font-family: 'Anglecia Pro Display'
-		font-weight: 700
 
 .features
 	padding: 125px 0 140px

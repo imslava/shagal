@@ -194,26 +194,29 @@
 				left: 62px
 
 .interior
-	padding: 120px 0 320px
+	padding: 120px 0 40px
 	position: relative
 	.outsideTitle
 		top: 0
-		right: -600px
+		right: -780px
 		bottom: 0
 	&-text
 		position: absolute
-		width: 470px
+		width: 410px
 		right: 0
-		top: 0
+		top: 145px
 	&-slide
 		@include flex
 		align-items: flex-start
 		position: relative
 		&__img
-			width: calc(100% - 470px - 75px)
-			height: 675px
+			width: calc(100% - 410px - 45px)
+			height: 1055px
 			position: relative
 			&-full
+				-webkit-mask-image: url(../img/src/svg/interior-mask.svg)
+				mask-composite: add
+				mask-position: top right
 				position: absolute
 				top: 0
 				bottom: 0
@@ -221,12 +224,12 @@
 				background-size: cover
 				background-position: center center
 				background-repeat: no-repeat
-				max-width: 1400px
+				max-width: 1429px
 		&__info
 			width: 670px
 			height: 320px
 			position: absolute
-			bottom: -50px
+			bottom: 90px
 			right: 0
 			@include flex
 			align-items: center
@@ -236,6 +239,7 @@
 				height: 100%
 				box-shadow: 0px 11px 22px rgba(0, 0, 0, 0.15)
 				padding: 25px 50px 35px
+				border-radius: 10px
 				.subtitle
 					margin-bottom: 18px
 					display: block
@@ -247,7 +251,7 @@
 		&__control
 			width: 130px
 			position: absolute
-			bottom: -25px
+			bottom: 115px
 			right: 0
 			z-index: 100
 		&__count

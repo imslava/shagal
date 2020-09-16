@@ -54,7 +54,7 @@ $(document).ready(function(){
 	function resizeImageInterior() {
 	  var item = $('.interior-slide__img-full'),
 	      win_w = $(window).width(),
-	      width = (win_w / 100) * 54;
+	      width = (win_w / 100) * 60;
 	  item.css('width', width);
 	};
 
