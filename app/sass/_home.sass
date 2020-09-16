@@ -275,16 +275,34 @@
 	bottom: 0
 
 .bigMenu
-	height: 820px
+	height: 940px
 	background: #eee
 	color: #fff
 	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 70px
+		background: url(../img/src/svg/menu-top.svg) no-repeat top center
+		z-index: 2
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 125px
+		background: url(../img/src/svg/menu-bottom.svg) no-repeat top center
+		z-index: 2
 	.container
 		height: 100%
 		@include flex
 	&-item
 		height: 100%
-		padding: 70px 0 135px
+		padding: 120px 0 135px
 		&__bg
 			position: absolute
 			top: 0
@@ -314,6 +332,7 @@
 		&__type
 			width: 100%
 			margin-top: auto
+			margin-bottom: 90px
 			h2
 				font-family: 'Anglecia Pro Display'
 				font-weight: 700
@@ -360,7 +379,7 @@
 	&-container
 		height: auto !important
 		position: absolute
-		bottom: 40px
+		bottom: 125px
 		left: 0
 		right: 0
 	&-slider
