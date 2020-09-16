@@ -1,0 +1,405 @@
+.novelty
+	position: relative
+	padding: 90px 0 120px
+	overflow: hidden
+	.container
+		@include flex
+		align-items: center
+	&-img
+		display: block
+		filter: drop-shadow(0px 109px 35px rgba(0, 0, 0, 0.35))
+	&-text
+		width: 410px
+		margin-left: auto
+		margin-right: 90px
+
+.blot-1
+	position: absolute
+	left: 0
+	top: 0
+	bottom: 0
+	margin: auto 0
+.blot-2
+	position: absolute
+	top: -90px
+	right: 0
+.blot-3
+	position: absolute
+	right: 0
+	top: 60px
+
+.philosophy
+	height: 1030px
+	overflow: hidden
+	position: relative
+	&-text
+		width: 360px
+		position: relative
+		color: #fff
+		padding-top: 180px
+		&:before
+			content: ''
+			position: absolute
+			z-index: -1
+			top: 0
+			right: -220px
+			width: 1256px
+			height: 1030px
+			background: url(../img/src/svg/philosophy-pattern.svg) no-repeat
+	&-quote
+		@include flex
+		align-items: center
+		margin-bottom: 59px
+		img
+			margin-right: 20px
+			mix-blend-mode: darken
+		p
+			flex: 1
+			font-size: 18px
+			line-height: 30px
+			color: #C7B0C4
+			font-family: 'PT Serif', serif
+	&-image
+		position: absolute
+		background-position: center center
+		background-size: cover
+		background-repeat: no-repeat
+		background-attachment: local
+		top: 0
+		width: 80%
+		right: 0
+		bottom: 0
+	&-slider
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		.slick-list, .slick-track, .slick-slide, .slick-slide > div
+			height: 100%
+		&__item
+			height: 100%
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+		.slick-active
+			z-index: 1000
+
+.chef
+	padding: 105px 0
+	.outsideTitle
+		top: 0
+		left: 150px
+		bottom: 0
+	.container
+		@include flex
+		align-items: center
+	&-text
+		width: 510px
+		@include flex
+		.title
+			margin-bottom: 68px
+	&-quote
+		width: 460px
+		position: relative
+		margin-left: 50px
+		&:before
+			content: ''
+			position: absolute
+			width: 31px
+			height: 23px
+			top: 6px
+			left: -50px
+			background: url(../img/src/svg/quote.svg) no-repeat
+	&-video
+		height: 73px
+		box-shadow: 0px 5px 21px rgba(0, 0, 0, 0.08)
+		border-radius: 100px
+		position: relative
+		font-size: 21px
+		color: #765B81
+		line-height: 73px
+		padding: 0 41px 0 81px
+		margin-top: 42px
+		cursor: pointer
+		&:before
+			content: ''
+			position: absolute
+			width: 53px
+			height: 53px
+			top: 10px
+			left: 10px
+			background: url(../img/src/svg/play.svg) no-repeat
+			border-radius: 100%
+	&-photo
+		position: relative
+		width: calc(100% - 510px - 72px)
+		margin-left: auto
+		img
+			display: block
+			position: absolute
+			margin: auto
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			&:first-child
+				position: relative
+			&:nth-child(2)
+				zoom: .92
+				left: 32px
+			&:nth-child(3)
+				zoom: .84
+				left: 62px
+
+.interior
+	padding: 120px 0 320px
+	position: relative
+	.outsideTitle
+		top: 0
+		right: -600px
+		bottom: 0
+	&-text
+		position: absolute
+		width: 470px
+		right: 0
+		top: 0
+	&-slide
+		@include flex
+		align-items: flex-start
+		position: relative
+		&__img
+			width: calc(100% - 470px - 75px)
+			height: 675px
+			position: relative
+			&-full
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				background-size: cover
+				background-position: center center
+				background-repeat: no-repeat
+				max-width: 1400px
+		&__info
+			width: 670px
+			height: 320px
+			position: absolute
+			bottom: -50px
+			right: 0
+			@include flex
+			align-items: center
+			&-text
+				background: #fff
+				width: 515px
+				height: 100%
+				box-shadow: 0px 11px 22px rgba(0, 0, 0, 0.15)
+				padding: 25px 50px 35px
+				.subtitle
+					margin-bottom: 18px
+					display: block
+				.text-2
+					height: 108px
+	&-slider
+		.slick-list
+			overflow: initial
+		&__control
+			width: 130px
+			position: absolute
+			bottom: -25px
+			right: 0
+			z-index: 100
+		&__count
+			font-family: 'PT Serif'
+			font-size: 70px
+			color: rgba(46, 17, 19, 0.11)
+			display: block
+			text-align: center
+			margin: 70px 0 69px
+		&__arrow
+			width: 24px
+			height: 26px
+			display: block
+			margin: 0 auto
+			background: url(../img/src/svg/interior-arrow.svg) no-repeat
+			cursor: pointer
+			&-prev
+				transform: rotate(180deg)
+
+.blot-4
+	position: absolute
+	left: 0
+	right: 0
+	margin: 0 auto
+	bottom: 0
+
+.bigMenu
+	height: 820px
+	background: #eee
+	color: #fff
+	position: relative
+	.container
+		height: 100%
+		@include flex
+	&-item
+		height: 100%
+		padding: 70px 0 135px
+		&__bg
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: cover
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: radial-gradient(139.23% 152.02% at 32.98% 3.42%, rgba(0, 0, 0, 0.13) 0%, #000000 100%)
+		&__name
+			text-align: right
+			font-size: 25px
+			line-height: 40px
+			opacity: .75
+			width: 100%
+		&__footer
+			margin-top: auto
+			width: 100%
+		&__type
+			width: 100%
+			margin-top: auto
+			h2
+				font-family: 'Anglecia Pro Display'
+				font-weight: 700
+				font-size: 60px
+				margin-bottom: 20px
+			p
+				font-size: 20px
+				font-weight: 300
+				line-height: 33px
+		&__link
+			width: 725px
+			overflow: hidden
+			-webkit-mask: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%)
+			@include flex
+			align-items: center
+			ul
+				width: 1000%
+				@include flex
+				align-items: flex-start
+				li
+					font-size: 20px
+					text-transform: uppercase
+					line-height: 20px
+					padding: 8px 0
+					letter-spacing: 0.06em
+					cursor: pointer
+			.slick-slide
+				margin-right: 50px
+			.slick-active li
+				border-bottom: 1px solid #fff
+			&-next
+				width: 18px
+				height: 18px
+				display: block
+				background: url(../img/src/svg/bigmenu-next.svg) no-repeat
+				background-size: cover
+				margin-left: 20px
+				cursor: pointer
+		&__row
+			@include flex
+			align-items: center
+			margin-top: 15px
+			width: 100%
+	&-container
+		height: auto !important
+		position: absolute
+		bottom: 40px
+		left: 0
+		right: 0
+	&-slider
+		height: 100%
+		.slick-list, .slick-track, .slick-slide, .container
+			height: 100%
+		.slick-slide > div
+			height: 100%
+
+.tryFirst
+	padding: 160px 0 100px
+	&-top
+		@include flex
+		align-items: flex-end
+		margin-bottom: 60px
+		.title
+			margin-bottom: 0
+	&-slider
+		// position: relative
+		.slick-list
+			overflow: initial
+		.slick-arrow
+			position: absolute
+			top: 0
+			bottom: 0
+			font-size: 0
+			padding: 0
+			width: 700px
+			border: 0
+			z-index: 100
+			&:before
+				content: ''
+				position: absolute
+				top: 131px
+				width: 33px
+				height: 38px
+				background: url(../img/src/svg/tryfirst-arrow.svg) no-repeat
+				background-size: cover
+				cursor: pointer
+		.slick-prev
+			left: -700px
+			background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+			&:before
+				display: none
+		.slick-next
+			right: -700px
+			background: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+			&:before
+				left: 94px
+	&-item
+		width: 300px !important
+		margin-right: 20px
+		&__img
+			width: 100%
+			height: 300px
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+			border-radius: 10px
+			margin-bottom: 30px
+		p
+			font-size: 20px
+			line-height: 33px
+			font-weight: 300
+			margin-bottom: 10px
+		b
+			font-size: 20px
+			line-height: 33px
+			color: #555
+			font-weight: normal
+	&-swipe
+		position: absolute
+		bottom: -50px
+		left: 0
+		right: 0
+		margin: 0 auto
+		display: none
+
+.blot-5
+	position: absolute
+	top: -160px
+	right: -90px
+	z-index: -1

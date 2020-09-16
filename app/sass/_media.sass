@@ -1,0 +1,569 @@
+@media(max-width: 1600px)
+	.chocoHour
+		background: #eeecf4 url(../img/src/chocoHour.jpg) no-repeat top 100px left -300px
+
+@media(max-width: 1300px)
+	.container
+		max-width: 1200px
+
+@media(max-width: 1200px)
+	.container
+		max-width: 1024px
+
+	.promo-top__street
+		order: 1
+		margin-top: 21px
+	.promo-top__shedule
+		order: 2
+		margin-right: auto
+	.btn-promo
+		order: 3
+	.promo-top__tar
+		width: 265px
+
+	.promo-content__text h1
+		font-size: 64px
+		line-height: 1.2
+	.promo-content__text h2
+		font-size: 24px
+
+	.promo-content__menu
+		margin-right: 20px
+	.promo-content__text
+		width: calc(100% - 310px)
+
+	.novelty-img
+		width: 440px
+
+	.blot-3
+		z-index: 6
+		top: 100px
+	.blot-2
+		top: -130px
+		right: 50px
+		z-index: -1
+
+	.chef-photo
+		zoom: .8
+		width: 570px
+
+	.outsideTitle
+		display: none
+
+	.interior
+		padding-top: 50px
+	.interior-slide__img
+		width: calc(100% - 470px - 25px)
+
+	.bigMenu-item__link
+		width: calc(100% - 420px)
+
+	.contacts-info
+		padding: 0 50px
+		margin-top: 40px
+		width: 100%
+		justify-content: space-between
+		@include flex
+
+	.chocoHour
+		background: #eeecf4 url(../img/src/chocoHour.jpg) no-repeat top 100px left -500px
+
+@media(max-width: 1024px)
+	.container
+		max-width: 768px
+
+	.promo-top__tar
+		width: 110px
+		span
+			display: none
+	.promo-top__street,
+	.promo-top__shedule
+		font-size: 14px
+		width: 250px
+
+	.novelty-img
+		width: 320px
+		margin: 0 auto
+	.novelty-text
+		margin: 60px auto 0
+		width: 100%
+		max-width: 410px
+
+	.blot-1, .blot-3, .blot-7,
+	.contacts .container:before
+	 	display: none
+
+	.chef-photo
+		width: 100%
+		zoom: 1
+		margin: 0 auto
+		position: relative
+		order: -1
+		img
+			&:nth-child(2), &:nth-child(3)
+				display: none
+			&:first-child
+				margin: 0 auto
+				width: 60%
+				position: relative
+
+	.chef-text
+		margin: 60px auto 0
+		width: 100%
+		max-width: 510px
+
+	.btn-tryFirst
+		display: none
+
+	.contacts-text
+		padding-left: 0
+	.contacts-info
+		padding: 0
+
+	.contacts-text__item
+		width: 50%
+
+	.contacts-text a
+		display: block
+		width: 100%
+		margin-bottom: 40px
+
+	// .footer-cta
+	// 	zoom: .7
+	.footer-cta
+		width: 340px
+		height: 600px
+	.footer-cta h2
+		font-size: 96px
+
+	.footer
+		padding: 120px 0
+		overflow: hidden
+
+	.featuresPage-start__item, .newsposterPage-start__item
+		width: calc(100% / 2 - 40px)
+
+	.featuresPage-start__item h4, .newsposterPage-start__item h4
+		font-size: 24px
+		line-height: 1.3
+
+	.chocoHour
+		background: #eeecf4 url(../img/src/chocoHour.jpg) no-repeat bottom left
+		background-size: auto 500px
+		padding-bottom: 400px
+		&-text
+			max-width: 100%
+
+@media(max-width: 768px)
+	.container
+		max-width: 576px
+
+	.promo-top__phone, .promo-top__social, .btn-promo, .blot-4
+		display: none
+
+	.promo-top__burger
+		width: 39px
+		height: 23px
+		display: block
+		background: url(../img/src/svg/burger.svg) no-repeat center center
+		cursor: pointer
+		position: relative
+		z-index: 100
+		// margin-left: auto
+		transition: .3s
+		&.active
+			transform: rotate(180deg)
+			background: url(../img/src/svg/close.svg) no-repeat center center
+
+	.promo-top .container
+		align-items: center
+
+	.promo-content__text
+		width: 100%
+
+	.promo-content .container
+		margin-top: auto
+
+	.philosophy
+		height: auto
+
+	.philosophy-text
+		padding: 80px 0 120px
+
+	.interior-text
+		position: relative
+		width: 100%
+		margin-bottom: 50px
+	.interior-slide__img
+		width: 100%
+		height: 310px
+	.interior-slide__img-full
+		width: 100% !important
+	.interior-slide__info
+		position: relative
+		width: 100%
+		bottom: 0
+		left: 0
+	.interior-slide__info-text
+		width: 100%
+		text-align: center
+		position: relative
+	.btn-interior
+		margin: 13px auto 0
+	.interior-slider__control
+		display: none
+
+	.interior-slider__count, .blot-5
+		display: none
+
+	.interior-mobile-arrow__prev, .interior-mobile-arrow__next
+		position: absolute
+		width: 28px
+		height: 32px
+		background: url(../img/src/svg/interior-arrow.svg) no-repeat center center
+		background-size: 14px auto
+		cursor: pointer
+		display: block
+		top: 41px
+	.interior-mobile-arrow__prev
+		left: 8px
+		transform: rotate(180deg)
+	.interior-mobile-arrow__next
+		right: 8px
+
+	.interior
+		padding: 0 0 80px
+	.bigMenu-item__link
+		width: 100%
+	.bigMenu-item__link-next
+		display: none
+	.btn-bigMenu
+		width: 100%
+		margin-top: 30px
+	.bigMenu-item
+		padding-bottom: 230px
+	.bigMenu-item__name
+		text-align: left
+
+	.tryFirst
+		padding: 80px 0
+
+	.features-item
+		width: 500px !important
+
+	.contacts-info__item
+		width: calc(100% / 2)
+
+	// .footer-cta
+	// 	zoom: .5
+
+	.footer-cta
+		width: 250px
+		height: 450px
+	.footer-cta h2
+		font-size: 70px
+
+	.blot-8
+		width: 900px
+		top: -160px
+		left: -150px
+
+	.menu
+		padding: 80px 0
+		.container
+			max-width: 100%
+	.menu-list__wrap
+		overflow-x: scroll
+		width: 100%
+
+	.menu-list
+		margin: 0 -15px
+		width: 100%
+		// display: inline-flex
+		// align-items: center
+		flex-wrap: nowrap
+		white-space: nowrap
+	.menu-table__top .menu-table__name
+		font-size: 24px
+	.menu-table__top .menu-table__price, .menu-table__top .menu-table__weight
+		font-size: 15px
+	.menu-table__item
+		font-size: 15px
+		line-height: 25px
+	.menu-table__price, .menu-table__weight
+		width: 90px
+	.menu-table__name
+		width: calc(100% - 180px)
+	.menu-list li
+		font-size: 15px
+		margin: 0 15px 15px
+
+	.tryFirst-swipe,
+	.features-swipe,
+	.newsPoster-swipe,
+	.menu-swipe
+		display: block
+
+	.promo-content .container
+		position: initial
+	.promo-content__menu
+		position: fixed
+		z-index: 99
+		top: 0	
+		left: 100%
+		right: 0
+		background: #000
+		width: 100%
+		height: 100%
+		margin: 0
+		text-align: center
+		padding-top: 100px
+		transition: .3s
+		&.active
+			left: 0
+	.promo-content__menu li
+		font-size: 20px
+		font-weight: 300
+		a
+			padding: 0
+	.promo-content__menu li a:before
+		display: none
+
+@media(max-width: 576px)
+	.container
+		max-width: 475px
+
+	.promo-content__text h1
+		font-size: 40px
+	.promo-content__text h2
+		font-size: 17px
+		line-height: 24px
+		margin-top: 20px
+	.promo-top__street p,
+	.contacts-text__street p
+		padding-left: 9px
+
+	.novelty-img
+		width: 240px
+
+	.title, .subtitle,
+	.bigMenu-item__type h2
+		font-size: 40px
+		line-height: 1.3
+
+	.novelty-text
+		max-width: 100%
+
+	.text, .text-2,
+	.bigMenu-item__type p,
+	.bigMenu-item__name
+		font-size: 18px
+		line-height: 33px
+
+	.novelty, .chef
+		padding: 80px 0
+
+	.philosophy-text	
+		padding: 60px 0 80px
+
+	.chef-photo img:first-child
+		width: 100%
+		max-width: 320px
+
+	.chef-text
+		margin-top: 40px
+
+	.chef-text .title
+		margin-bottom: 30px
+
+	.interior-slide__info-text
+		padding: 25px 15px 35px
+
+	.bigMenu-item__link ul li
+		font-size: 18px
+	.bigMenu-item__link .slick-slide
+		margin-right: 30px
+
+	.bigMenu-item
+		padding: 45px 0 220px
+
+	.features-item
+		width: 400px!important
+		padding: 30px
+		height: 280px
+	.features-item__text
+		a
+			font-size: 24px
+
+	.contacts-text__item
+		width: 100%
+
+	.contacts-text__shedule
+		margin-top: 30px
+
+	.contacts
+		padding: 60px 0
+	.contacts-info
+		margin-top: 55px
+
+	.philosophy-quote
+		margin-bottom: 40px
+
+	.featuresPage-start__item, .newsposterPage-start__item
+		width: calc(100% - 40px)
+		max-width: 100%
+
+	.featuresPage-start__item:before, .newsposterPage-start__item:before
+		left: 0
+		right: 0
+		text-align: center
+	.featuresPage-start__item h4, .newsposterPage-start__item h4
+		margin-bottom: 5px
+
+	.featuresPage, .newsposterPage
+		padding: 70px 0 80px
+
+	.featuresPage-start, .newsposterPage-start
+		padding: 0
+
+	.featuresPage-gallery, .newsposterPage-gallery
+		padding: 70px 0 80px
+
+	.featuresPage-price, .newsposterPage-price
+		padding: 0 0 80px
+
+	.featuresPage-start, .newsposterPage-start
+		.title
+			margin-bottom: 10px
+	.featuresPage-gallery__item, .newsposterPage-gallery__item
+		width: calc(100% / 2 - 20px)
+	.featuresPage-start__item img, .newsposterPage-start__item img
+		margin-bottom: 15px
+
+	.featuresPage-start__item, .newsposterPage-start__item
+		margin: 60px 20px 0
+		padding: 0 15px
+		width: 100%
+
+	.footer-cta
+		width: 225px
+		height: 350px
+	.footer-cta h2
+		font-size: 60px
+		top: 65px
+
+	.philosophy-text:before
+		right: -280px
+		bottom: 0
+		height: auto
+	.philosophy-image
+		position: relative
+		width: 100%
+		height: 360px	
+
+@media(max-width: 475px)
+	body
+		text-size-adjust: 100%
+	.container
+		max-width: 100%
+		// padding: 0 10px
+
+	.text, .text-2,
+	.bigMenu-item__type p,
+	.bigMenu-item__name
+		font-size: 16px
+		line-height: 26px
+
+	.title, .subtitle,
+	.bigMenu-item__type h2
+		font-size: 36px
+
+	.bigMenu-item__link ul li
+		font-size: 16px
+
+	.chef-video
+		font-size: 15px
+
+	.promo-top__logo
+		width: 100px
+	.promo-top__shedule
+		margin-top: 15px
+
+	.novelty-img
+		filter: drop-shadow(0 20px 20px rgba(0, 0, 0, .35))
+	.novelty-text
+		margin-top: 40px
+
+	.title
+		margin-bottom: 33px
+
+	.philosophy-quote, .philosophy-text
+		width: 100%
+
+	.interior-slide__info-text h3
+		font-size: 30px
+	.interior-slider
+		margin: 0 -20px
+	.interior-slide__info
+		height: auto
+	.interior-slide__info-text .text-2
+		height: auto
+		margin-bottom: 40px
+	.interior-mobile-arrow__prev, .interior-mobile-arrow__next
+		top: 28px
+
+	.tryFirst-item
+		width: 220px !important
+	.tryFirst-item__img
+		height: 220px
+		margin-bottom: 20px
+	.tryFirst-item p
+		font-size: 16px
+		line-height: 26px
+	.tryFirst-top, .newsPoster .title
+		margin-bottom: 40px
+
+	.features
+		padding: 70px 0 80px
+	.features .title
+		font-size: 32px
+
+	.features-item, .newsPoster-item
+		width: 270px !important
+
+	.newsPoster-item a
+		font-size: 24px
+		line-height: 1.3
+
+	.newsPoster
+		padding: 70px 0 80px
+
+	.blot-6
+		display: none
+
+	.contacts-info__item
+		width: 100%
+
+	.footer-cta
+		width: 155px
+		height: 260px
+	.footer-cta h2
+		font-size: 42px
+		top: 60px
+
+	.footer
+		padding: 80px 0
+
+	.contacts-text .title
+		font-size: 28px
+
+	.chocoHour
+		padding-bottom: 200px
+		background: #EEECF4 url(../img/src/chocoHour.jpg) no-repeat bottom -200px left
+		background-size: 475px auto
+
+	.btn-chocoHour
+		width: 100%
+	.chocoHour-link
+		margin-bottom: 0
+		margin-top: 40px

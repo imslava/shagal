@@ -1,0 +1,506 @@
+// import sass
+@import "mixins"
+@import "vars"
+@import "fonts"
+
+// base styles
+html, body
+	width: 100%
+	height: 100%
+
+h1, h2, h3, h4, h5, h6, ul, p
+	padding: 0
+	margin: 0
+
+ul
+	list-style: none
+
+\:focus, \:active
+	outline: 0 !important
+
+a, a:focus, a:active, a:hover
+	text-decoration: none !important
+
+*
+	box-sizing: border-box
+	
+body
+	font-family: 'Graphik LCG'
+	font-weight: normal
+	font-size: 16px
+	color: #2E1113
+
+// site styles
+.wrapper
+	max-width: 2560px
+	min-width: 320px
+	width: 100%
+	margin: 0 auto
+	overflow: hidden
+
+.container
+	max-width: 1250px
+	width: 100%
+	padding: 0 20px
+	margin: 0 auto
+	position: relative
+	z-index: 5
+
+.promo
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	color: #fff
+	@include flex
+	flex-direction: column
+	// height: 100vh
+	// min-height: 800px
+	min-height: 100vh
+	position: relative
+	z-index: 100
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: linear-gradient(130.14deg, rgba(0, 0, 0, 0.5) 22.06%, rgba(0, 0, 0, 0.2) 66.53%), radial-gradient(61.83% 61.83% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.79) 100%)
+		z-index: 2
+	&-top
+		width: 100%
+		padding-top: 20px
+		img
+			display: block
+		.container
+			@include flex
+			justify-content: space-between
+			position: initial
+		&__logo
+			width: 140px
+			max-width: 100%
+			position: relative
+			z-index: 100
+			img
+				max-width: 100%
+		&__item
+			@include flex
+			align-items: center
+			position: relative
+			z-index: 2
+			img
+				margin-right: 15px
+			p
+				flex: 1
+				line-height: 24px
+		&__street, &__shedule
+			width: 280px
+			b
+				font-weight: 600
+		&__tar
+			font-weight: 600
+		&__phone
+			font-size: 19px
+			font-weight: 600
+			a
+				color: #fff
+		&__social
+			position: relative
+			z-index: 2
+			@include flex
+			align-items: center
+			li
+				margin-right: 10px
+				&:last-child
+					margin-right: 0
+		&__shedule
+			margin-top: 21px
+	&-content
+		width: 100%
+		padding: 60px 0
+		flex-grow: 1
+		@include flex
+		align-items: center
+		.container
+			@include flex
+			align-items: center
+		&__text
+			width: calc(100% - 290px)
+			h1
+				font-size: 80px
+				line-height: 100px
+				font-family: 'Anglecia Pro Display'
+				font-weight: normal
+			h2
+				font-size: 30px
+				line-height: 40px
+				font-weight: normal
+				margin-top: 38px
+		&__menu
+			width: 290px
+			margin-left: auto
+			text-align: right
+			margin-right: -20px
+			li
+				font-size: 15px
+				text-transform: uppercase
+				letter-spacing: 0.1em
+				line-height: 40px
+				margin-bottom: 24px
+				a
+					position: relative
+					padding-right: 20px
+					opacity: .8
+					transition: .3s
+					color: #fff
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						bottom: 0
+						right: 0
+						margin: auto 0
+						width: 20px
+						height: 1px
+						background: #fff
+						right: -20px
+						transition: .3s
+					&:hover
+						opacity: 1
+						padding-right: 40px
+						&:before
+							width: 40px
+				&:last-child
+					margin-bottom: 0
+	&-slider
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: #000
+		.slick-list, .slick-track, .slick-slide, .slick-slide > div
+			height: 100%
+		&__item
+			height: 100%
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+
+.chocoHour
+	padding: 80px 0 100px
+	background: #EEECF4 url(../img/src/chocoHour.jpg) no-repeat top 100px left
+	.container
+		@include flex
+		align-items: center
+	&-text
+		width: 100%
+		max-width: 540px
+		margin-left: auto
+		.title
+			color: #785954
+	&-row
+		@include flex
+		align-items: center
+		margin-top: 50px
+	&-link
+		display: block
+		margin: 0 auto 7px
+		color: #414141
+		border-bottom: 1px solid #414141
+		font-size: 22px
+		font-family: 'Anglecia Pro Display'
+		font-weight: 700
+
+.features
+	padding: 80px 0 90px
+	background: #CFD6D9
+	.title
+		text-align: center
+	&-slider
+		margin-top: 58px
+		.slick-list
+			overflow: initial
+		.slick-arrow
+			position: absolute
+			top: 0
+			bottom: 0
+			font-size: 0
+			padding: 0
+			width: 700px
+			border: 0
+			z-index: 100
+			// &:before
+			// 	content: ''
+			// 	position: absolute
+			// 	top: 131px
+			// 	width: 33px
+			// 	height: 38px
+			// 	background: url(../img/src/svg/tryfirst-arrow.svg) no-repeat
+			// 	background-size: cover
+			// 	cursor: pointer
+		.slick-prev
+			left: -700px
+			background: linear-gradient(-90deg, rgba(207,214,217,0) 0%, rgba(207,214,217,1) 100%)
+			&:before
+				display: none
+		.slick-next
+			right: -750px
+			background: linear-gradient(-90deg, rgba(207,214,217,1) 0%, rgba(207,214,217,0) 100%)
+			&:before
+				left: 44px
+	&-item
+		color: #fff
+		width: 570px !important
+		height: 380px
+		border-radius: 10px
+		display: -webkit-flex !important
+		display: -moz-flex !important
+		display: -ms-flex !important
+		display: -o-flex !important
+		display: flex !important
+		flex-wrap: wrap
+		align-items: flex-end
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		margin-right: 20px
+		padding: 50px
+		a
+			color: #fff
+			&:hover
+				border-bottom: 1px solid #fff
+		.text
+			margin-top: 26px
+	&-swipe
+		position: absolute
+		bottom: -60px
+		left: 0
+		right: 0
+		margin: 0 auto
+		display: none
+
+.newsPoster
+	padding: 80px 0 140px
+	.title
+		margin-bottom: 60px
+	&-slider
+		.slick-list
+			overflow: initial
+		.slick-arrow
+			position: absolute
+			top: 0
+			bottom: 0
+			font-size: 0
+			padding: 0
+			width: 700px
+			border: 0
+			z-index: 100
+			// &:before
+			// 	content: ''
+			// 	position: absolute
+			// 	top: 131px
+			// 	width: 33px
+			// 	height: 38px
+			// 	background: url(../img/src/svg/tryfirst-arrow.svg) no-repeat
+			// 	background-size: cover
+			// 	cursor: pointer
+		.slick-prev
+			left: -700px
+			background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+			&:before
+				display: none
+		.slick-next
+			right: -750px
+			background: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+			&:before
+				left: 44px
+	&-item
+		width: 375px !important
+		margin-right: 20px
+		&__img
+			width: 100%
+			height: 260px
+			border-radius: 10px
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+		small
+			font-size: 15px
+			display: block
+			letter-spacing: 0.1em
+			margin: 33px 0 16px
+		a
+			color: #2E1113
+			font-size: 30px
+			line-height: 40px
+			font-family: "PT Serif"
+			margin-right: 25px
+			&:hover
+				border-bottom: 1px solid #2E1113
+		.text
+			padding-right: 25px
+			margin-top: 22px
+	&-swipe
+		position: absolute
+		bottom: -60px
+		left: 0
+		right: 0
+		margin: 0 auto
+		display: none
+
+.blot-6
+	position: absolute
+	bottom: -140px
+	right: -70px
+	z-index: -1
+
+.contacts
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	color: #fff
+	padding: 70px 0 30px
+	.container
+		@include flex
+		align-items: flex-end
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: -70px
+			bottom: -30px
+			left: -680px
+			width: 700px
+			background: #fff
+	&-info
+		margin-left: auto
+		&__item
+			@include flex
+			align-items: flex-start
+			margin-bottom: 35px
+			&:last-child
+				margin-bottom: 0
+			span
+				display: block
+				width: 50px
+				img
+					display: block
+			b
+				display: block
+				width: calc(100% - 50px)
+				font-weight: 500
+				line-height: 24px
+	&-text
+		width: 100%
+		max-width: 910px
+		padding-left: 50px
+		position: relative
+		z-index: 5
+		.title
+			max-width: 800px
+			margin-bottom: 26px
+		.text
+			max-width: 600px
+			margin-bottom: 0
+		&__row
+			@include flex
+			align-items: center
+			justify-content: space-between
+			margin-top: 35px
+		&__item
+			@include flex
+			align-items: center
+			color: #fff
+			img
+				margin-right: 15px
+			p
+				flex: 1
+				line-height: 24px
+		&__street, &__shedule
+			width: 280px
+			b
+				font-weight: 600
+		a
+			font-size: 20px
+			font-weight: 300
+
+.blot-7
+	position: absolute
+	top: -320px
+	left: -660px
+
+.blot-8
+	position: absolute
+	top: -260px
+	left: -50px
+	z-index: -1
+
+.blot-9
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	margin: 0 auto
+	max-width: 100%
+	padding: 0 15px
+
+.footer
+	padding: 320px 0 50px
+	&-cta
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		width: 530px
+		height: 730px
+		margin: 0 auto
+		position: relative
+		cursor: pointer
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(255,255,255,.3)
+		h2
+			position: absolute
+			font-family: 'Anglecia Pro Display'
+			font-weight: normal
+			font-size: 147px
+			left: -50%
+			// right: -50%
+			text-align: center
+			margin: 0 auto
+			display: block
+			color: #423C45
+			top: 115px
+			span
+				color: #fff
+				position: absolute
+				left: -10px
+				right: -15px
+				top: 0
+				p
+					opacity: 0
+					display: inline-block
+	&-copy
+		max-width: 600px
+		margin: 60px auto 0
+		text-align: center
+
+.show-scroll
+	overflow: hidden
+
+// home page
+@import "home"
+
+// menu page
+@import "menu"
+
+// features page
+@import "features"
+
+// import adaptive
+@import "media"

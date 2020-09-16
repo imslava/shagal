@@ -1,0 +1,56 @@
+.menu
+	padding: 120px 0
+	&-list
+		@include flex
+		align-items: flex-start
+		// justify-content: space-between
+		margin: 0 -40px
+		li
+			font-size: 20px
+			text-transform: uppercase
+			line-height: 20px
+			padding: 8px 0
+			letter-spacing: 0.06em
+			cursor: pointer
+			color: #797979
+			margin: 0 40px 40px
+			border-bottom: 1px solid #fff
+			&.active
+				border-bottom: 1px solid #797979
+	&-tab
+		display: none
+		&.active
+			display: block
+	&-table
+		color: #555
+		margin-top: 65px
+		&__top, &__item
+			@include flex
+		&__name
+			width: calc(100% - 340px)
+		&__weight, &__price
+			width: 170px
+			text-align: right
+		&__top
+			font-family: 'Anglecia Pro Display'
+			font-weight: normal
+			align-items: flex-end
+			margin-bottom: 24px
+			.menu-table__weight, .menu-table__price
+				font-size: 24px
+				padding-bottom: 2px
+			.menu-table__name
+				font-size: 36px
+		&__item
+			align-items: flex-start
+			font-size: 20px
+			line-height: 33px
+			font-weight: 300
+			margin-bottom: 16px
+			&:last-child
+				margin-bottom: 0
+	&-swipe
+		position: absolute
+		top: 50px
+		right: 0
+		display: none

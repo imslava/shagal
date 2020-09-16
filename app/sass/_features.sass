@@ -1,0 +1,59 @@
+.featuresPage, .newsposterPage
+	text-align: center
+	padding: 100px 0 60px
+	.container
+		max-width: 920px
+	.text
+		color: #555
+	&-start
+		padding: 60px 0
+		text-align: center
+		&__row
+			@include flex
+			align-items: flex-start
+			margin: 0 -20px
+			justify-content: space-around
+			counter-reset: heading
+		&__item
+			width: calc(100% / 3 - 40px)
+			max-width: 400px
+			margin: 40px 20px 0
+			position: relative
+			&:before
+				counter-increment: heading
+				content: "0" counter(heading)
+				position: absolute
+				top: -55px
+				left: 55px
+				font-size: 160px
+				color: #2E1113
+				font-family: 'Anglecia Pro Display'
+				font-weight: bold
+				opacity: .1
+			img
+				height: 110px
+				display: block
+				margin: 0 auto 40px
+			h4
+				font-size: 30px
+				line-height: 38px
+				font-family: 'Anglecia Pro Display'
+				margin-bottom: 25px
+	&-gallery
+		text-align: center
+		padding: 60px 0
+		&__row
+			@include flex
+			align-items: flex-start
+			justify-content: center
+			margin: 0 -10px
+		&__item
+			margin: 10px
+			width: calc(100% / 4 - 20px)
+			background-color: #eee
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: cover
+	&-price
+		padding: 60px 0 120px
+		text-align: center

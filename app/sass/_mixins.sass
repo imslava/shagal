@@ -1,0 +1,234 @@
+@mixin flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+
+=btnColor($color)
+	border: 2px solid $color
+	background: $color
+	&:hover
+		color: $color
+
+=btnParams($w, $h, $lh)
+	width: $w
+	height: $h
+	line-height: $lh
+
+.btn
+	font-family: 'Anglecia Pro Display'
+	font-weight: 700
+	font-size: 22px
+	text-align: center
+	max-width: 100%
+	transition: .3s
+	display: block
+	color: #fff
+	cursor: pointer
+	&:hover
+		background: #fff
+	// color
+	&-white
+		border: 2px solid #fff
+		background: none
+		&:hover
+			background: #fff
+			color: #2E1113
+	&-black
+		+btnColor(#2E1113)
+	&-purple
+		+btnColor(#3C2A39)
+	&-brown
+		+btnColor(#785954)
+	// params
+	&-bigMenu, &-tryFirst
+		+btnParams(320px, 80px, 70px)
+		margin-left: auto
+	&-interior
+		+btnParams(285px, 70px, 64px)
+		margin-top: 13px
+	&-chocoHour
+		+btnParams(320px, 80px, 70px)
+	&-promo
+		+btnParams(200px, 60px, 56px)
+		margin-top: 14px
+		font-size: 15px
+		font-weight: 500
+		font-family: 'Graphik LCG'
+		position: relative
+		z-index: 2
+	&-popup
+		+btnParams(100%, 90px, 80px)
+		border-radius: 5px
+	&-featuresPage
+		+btnParams(350px, 90px, 84px)
+		margin: 0 auto
+
+.title
+	font-size: 50px
+	line-height: 62px
+	font-family: 'Anglecia Pro Display'
+	font-weight: 700
+	margin-bottom: 43px
+.subtitle
+	font-size: 40px
+	line-height: 51px
+	font-family: 'Anglecia Pro Display'
+	font-weight: 700
+	
+.text
+	font-size: 20px
+	line-height: 33px
+	font-weight: 300
+	margin-bottom: 19px
+	&:last-child
+		margin-bottom: 0
+
+.text-2
+	font-size: 17px
+	line-height: 27px
+	font-weight: 300
+	color: #555
+
+.outsideTitle
+	position: absolute
+	margin: auto 0
+	display: block
+	transform: rotate(-90deg)
+	p
+		letter-spacing: 0.1em
+		font-size: 33px
+		color: #666
+		font-weight: 300
+		opacity: .2
+
+.popup
+	text-align: center
+	display: none
+	max-width: 750px
+	width: 100%
+	padding: 70px 20px 44px
+	.subtitle
+		margin-bottom: 20px
+	.text
+		max-width: 570px
+		margin: 0 auto
+	form
+		max-width: 420px
+		width: 100%
+		margin: 40px auto 30px
+	a
+		color: #C7B0C4
+	label
+		font-size: 15px
+		line-height: 24px
+		margin: -5px 0 20px
+		display: block
+		cursor: pointer
+		input
+			display: none
+			&:checked + span:after
+				opacity: 1
+		span
+			text-align: left 
+			display: block
+			position: relative
+			padding-left: 36px
+			max-width: 300px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 4px
+				width: 20px
+				height: 20px
+				border: 2px solid #765B81
+				border-radius: 5px
+			&:after
+				content: ''
+				position: absolute
+				left: 4px
+				top: 8px
+				width: 16px
+				height: 16px
+				border-radius: 3px
+				background: #765B81
+				opacity: 0
+				transition: .3s
+
+.input
+	width: 100%
+	border: 0
+	height: 70px
+	border-radius: 5px
+	background: #F4F0F1
+	font-size: 17px
+	padding-left: 23px
+	margin-bottom: 25px
+	-webkit-appearance: none
+	-moz-appearance: none
+	display: block
+	min-height: 70px
+	line-height: 66px
+	&::-webkit-input-placeholder
+		color: rgba(128, 128, 128, 0.75)
+	&::-moz-placeholder
+		color: rgba(128, 128, 128, 0.75)
+	&:-moz-placeholder
+		color: rgba(128, 128, 128, 0.75)
+	&:-ms-input-placeholder
+		color: rgba(128, 128, 128, 0.75)
+	&.error
+		background: #ffecec
+
+.flatpickr-mobile:before
+	content: attr(placeholder)
+	color: rgba(128, 128, 128, 0.75)
+.flatpickr-mobile:focus[value]:not([value=""]):before
+	display: none
+input[type="hidden"][value]:not([value=""]) + .flatpickr-mobile:before
+	display: none
+
+label.error
+	display: none !important
+
+
+#icon-swipe
+	width: 72px
+	height: 35px
+	#hand
+		fill: #8a5b51
+		transform-origin: 50% 100%
+		animation: hand-swipe 3.5s infinite ease
+	#left
+		fill: #3c2a3a
+		opacity: 0
+		animation: arrow-left 3.5s infinite ease
+
+@keyframes hand-swipe
+	0%
+		transform: translateX(0px) rotate(0deg)
+	25%
+		transform: translateX(0px) rotate(0deg)
+	28%
+		transform: translateX(0px) rotate(0deg)
+	53%
+		transform: translateX(-3px) rotate(-6deg)
+	100%
+		transform: translateX(0px) rotate(0deg)
+
+@keyframes arrow-left
+	0%, 30%
+		transform: translateX(0)
+		opacity: 0
+	50%
+		transform: translateX(-8px)
+		opacity: 1
+	70%
+		transform: translateX(-10px)
+		opacity: 0
+	71%, 100%
+		transform: translateX(0)
+		opacity: 0
