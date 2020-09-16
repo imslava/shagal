@@ -180,6 +180,19 @@ $(document).ready(function(){
 
   if($("body").innerWidth() < 578){
   	$('.philosophy-slider__item').removeAttr('data-parallax');
-  }
+	}
+	
+	function onScroll() {
+
+		if($(document).scrollTop() > 200){
+			$('.cta-fixed').css('right', '55px');
+		}else{
+			$('.cta-fixed').css('right', '-100px');
+		}
+
+	}
+
+	onScroll();
+	$(document).on("scroll", onScroll);
 
 });

@@ -25,8 +25,8 @@ a, a:focus, a:active, a:hover
 	box-sizing: border-box
 	
 body
-	font-family: 'Graphik LCG'
-	font-weight: normal
+	font-family: 'Proxima Nova'
+	font-weight: 400
 	font-size: 16px
 	color: #2E1113
 
@@ -67,6 +67,15 @@ body
 		bottom: 0
 		background: linear-gradient(130.14deg, rgba(0, 0, 0, 0.5) 22.06%, rgba(0, 0, 0, 0.2) 66.53%), radial-gradient(61.83% 61.83% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.79) 100%)
 		z-index: 2
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -2px
+		background: url(../img/src/svg/promo-wave.svg) no-repeat top center
+		height: 70px
+		z-index: 3
 	&-top
 		width: 100%
 		padding-top: 20px
@@ -93,15 +102,14 @@ body
 			p
 				flex: 1
 				line-height: 24px
-		&__street, &__shedule
+		&__street
 			width: 280px
+		&__shedule, &__rest
+			width: 290px
 			b
-				font-weight: 600
-		&__tar
-			font-weight: 600
+				font-weight: 900
 		&__phone
 			font-size: 19px
-			font-weight: 600
 			a
 				color: #fff
 		&__social
@@ -113,7 +121,9 @@ body
 				margin-right: 10px
 				&:last-child
 					margin-right: 0
-		&__shedule
+		&__rest
+			margin-right: auto
+		&__shedule, &__rest
 			margin-top: 21px
 	&-content
 		width: 100%
@@ -129,8 +139,7 @@ body
 			h1
 				font-size: 80px
 				line-height: 100px
-				font-family: 'Anglecia Pro Display'
-				font-weight: normal
+				font-weight: 900
 			h2
 				font-size: 30px
 				line-height: 40px
@@ -186,6 +195,36 @@ body
 			background-size: cover
 			background-repeat: no-repeat
 			background-position: center center
+
+.cta-fixed
+	position: fixed
+	z-index: 10000
+	right: -100px
+	bottom: 30px
+	width: 78px
+	height: 78px
+	background: #BD0031 url(../img/src/svg/calendar.svg) no-repeat center center
+	border-radius: 100%
+	box-shadow: 0px 4px 22px rgba(183, 23, 23, 0.66)
+	cursor: pointer
+	transition: .3s
+	&:before
+		content: 'Забронировать стол'
+		width: 190px
+		height: 32px
+		left: 0
+		top: 0
+		bottom: 0
+		opacity: 0
+		margin: auto 0
+		position: absolute
+		font-size: 20px
+		line-height: 32px
+		transition: .3s
+		overflow: hidden
+	&:hover:before
+		left: -205px
+		opacity: 1
 
 .chocoHour
 	padding: 80px 0 100px
