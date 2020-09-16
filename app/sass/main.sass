@@ -399,19 +399,20 @@ body
 	background-repeat: no-repeat
 	background-position: center center
 	color: #fff
-	padding: 70px 0 30px
+	padding: 160px 0 80px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: url(../img/src/svg/contact-top.svg) no-repeat top center
 	.container
 		@include flex
 		align-items: flex-end
 		position: relative
-		&:before
-			content: ''
-			position: absolute
-			top: -70px
-			bottom: -30px
-			left: -680px
-			width: 700px
-			background: #fff
 	&-info
 		margin-left: auto
 		&__item
@@ -433,7 +434,6 @@ body
 	&-text
 		width: 100%
 		max-width: 910px
-		padding-left: 50px
 		position: relative
 		z-index: 5
 		.title
@@ -442,27 +442,34 @@ body
 		.text
 			max-width: 600px
 			margin-bottom: 0
+			position: relative
+			a
+				position: absolute
+				bottom: 20px
+				right: -250px
+				color: #ffffff
 		&__row
 			@include flex
 			align-items: center
-			justify-content: space-between
-			margin-top: 35px
+			margin-top: 55px
 		&__item
 			@include flex
 			align-items: center
 			color: #fff
+			font-weight: 300
 			img
 				margin-right: 15px
 			p
 				flex: 1
 				line-height: 24px
 		&__street, &__shedule
-			width: 280px
-			b
-				font-weight: 600
+			width: 320px
+		b
+			font-weight: 700
 		a
 			font-size: 20px
 			font-weight: 300
+
 
 .blot-7
 	position: absolute
