@@ -1,7 +1,8 @@
 .novelty
 	position: relative
+	z-index: 4
 	padding: 90px 0 120px
-	overflow: hidden
+	// overflow: hidden
 	.container
 		@include flex
 		align-items: center
@@ -15,23 +16,41 @@
 
 .blot-1
 	position: absolute
-	left: 0
-	top: 0
-	bottom: 0
-	margin: auto 0
+	top: -375px
+	right: -600px
+	filter: drop-shadow(0px 3px 6px rgba(0,0,0,.6))
+	z-index: -1
+
 .blot-2
 	position: absolute
-	top: -90px
-	right: 0
-.blot-3
-	position: absolute
-	right: 0
-	top: 60px
+	top: -85px
+	left: -540px
+	filter: drop-shadow(0px 3px 6px rgba(0,0,0,.6))
+	z-index: 1
 
 .philosophy
-	height: 1030px
-	overflow: hidden
+	height: 1180px
+	// overflow: hidden
 	position: relative
+	z-index: 3
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 85px
+		background: url(../img/src/svg/philosophy-top.svg) no-repeat top center
+		z-index: 3
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 163px
+		background: url(../img/src/svg/philosophy-bottom.svg) no-repeat top center
+		z-index: 3
 	&-text
 		width: 360px
 		position: relative
@@ -40,25 +59,25 @@
 		&:before
 			content: ''
 			position: absolute
-			z-index: -1
-			top: 0
-			right: -220px
-			width: 1256px
-			height: 1030px
-			background: url(../img/src/svg/philosophy-pattern.svg) no-repeat
+			z-index: -2
+			top: -60px
+			right: -310px
+			width: 1184px
+			height: 1305px
+			background: url(../img/src/blots/3.png) no-repeat
 	&-quote
-		@include flex
-		align-items: center
 		margin-bottom: 59px
-		img
-			margin-right: 20px
-			mix-blend-mode: darken
+		font-size: 20px
+		line-height: 30px
 		p
-			flex: 1
-			font-size: 18px
-			line-height: 30px
-			color: #C7B0C4
-			font-family: 'PT Serif', serif
+			font-style: italic
+			color: #ffffff
+			margin-bottom: 15px
+		b
+			font-weight: 700
+			font-style: italic
+	.text
+		font-weight: 300
 	&-image
 		position: absolute
 		background-position: center center
@@ -84,6 +103,28 @@
 			background-position: center center
 		.slick-active
 			z-index: 1000
+	&-dots
+		position: absolute
+		right: 0
+		bottom: -100px
+		.slick-dots
+			@include flex
+			align-items: center
+			justify-content: flex-end
+			li
+				button
+					padding: 0
+					font-size: 0
+					border: 0
+					width: 19px
+					height: 19px
+					border-radius: 100%
+					background: #c4c4c4
+					margin-left: 10px
+					transition: .3s
+					cursor: pointer
+				&.slick-active button
+					background: #ffffff
 
 .chef
 	padding: 105px 0

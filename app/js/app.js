@@ -166,7 +166,7 @@ $(document).ready(function(){
     minDate: "today"
 	});
 
-	$('.promo-slider, .philosophy-slider').slick({
+	$('.promo-slider').slick({
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
 	  infinite: true,
@@ -176,6 +176,19 @@ $(document).ready(function(){
  		autoplaySpeed: 4000,
  		fade: true,
   	cssEase: 'linear'
+	});
+
+	$('.philosophy-slider').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  infinite: true,
+	  dots: true,
+	  arrows: false,
+	  autoplay: true,
+ 		autoplaySpeed: 4000,
+ 		fade: true,
+		cssEase: 'linear',
+		appendDots: $('.philosophy-dots')
 	});
 
   if($("body").innerWidth() < 578){
