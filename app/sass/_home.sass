@@ -187,12 +187,15 @@
 			bottom: 0
 			&:first-child
 				position: relative
+				z-index: 1
 			&:nth-child(2)
 				zoom: .92
 				left: 32px
+				z-index: 2
 			&:nth-child(3)
 				zoom: .84
 				left: 62px
+				z-index: 3
 	&-control
 		@include flex
 		align-items: center
@@ -213,11 +216,11 @@
 	&-carousel
 		.slick-list
 			overflow: initial
+		.slick-slide
+			margin: 0 300px
 		&__item
 			display: flex !important
 			align-items: center
-		.slick-slide
-			margin-right: 1000px
 	&-dots
 		.slick-dots
 			@include flex

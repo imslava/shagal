@@ -1,5 +1,16 @@
 .menu
 	padding: 120px 0
+	position: relative
+	z-index: 4
+	&:before
+		content: ''
+		position: absolute
+		top: -560px
+		left: 0
+		right: 0
+		bottom: 0
+		background: url(../img/src/menu-pattern.png) no-repeat top center
+		z-index: -1
 	&-list
 		@include flex
 		align-items: flex-start

@@ -215,8 +215,16 @@ $(document).ready(function(){
 		dots: true,
 		arrows: false,
 	  variableWidth: true,
-	  // fade: true,
+		// fade: true,
+		speed: 1000,
 		appendDots: $('.chef-dots')
+	});
+
+	$(".chef-next").click(function() {
+	  $('.chef-carousel').slick("next");
+	});
+	$(".chef-prev").click(function() {
+	  $('.chef-carousel').slick("prev");
 	});
 
 });

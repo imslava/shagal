@@ -87,25 +87,6 @@
 	.contacts .container:before
 	 	display: none
 
-	.chef-photo
-		width: 100%
-		zoom: 1
-		margin: 0 auto
-		position: relative
-		order: -1
-		img
-			&:nth-child(2), &:nth-child(3)
-				display: none
-			&:first-child
-				margin: 0 auto
-				width: 60%
-				position: relative
-
-	.chef-text
-		margin: 60px auto 0
-		width: 100%
-		max-width: 510px
-
 	.btn-tryFirst
 		display: none
 
@@ -155,7 +136,40 @@
 
 	.footer-copy
 		margin-top: 20px
+
+	.chef-photo
+		width: 100%
+		zoom: 1
+		margin: 0
+		position: relative
+		order: -1
+		img
+			&:nth-child(2), &:nth-child(3)
+				display: none
+			&:first-child
+				margin: 0 auto
+				width: 60%
+				position: relative
+
+	.chef-text
+		margin: 60px auto 0
+		width: 100%
 		
+	.chef-carousel__item
+		justify-content: center
+		width: 738px !important
+		flex-wrap: wrap
+	.chef-quote
+		width: 100%
+	
+	.chef-text .title
+		margin-bottom: 40px
+		text-align: center
+		width: 100%
+	
+	.chef-control
+		justify-content: center
+		margin-top: 40px
 
 @media(max-width: 768px)
 	.container
@@ -348,6 +362,9 @@
 	.interior-text
 		top: 0
 	
+	.chef-carousel__item
+		width: 546px !important
+
 @media(max-width: 576px)
 	.container
 		max-width: 475px
@@ -479,6 +496,9 @@
 		margin-bottom: 0
 		margin-top: 40px
 
+	.chef-carousel__item
+		width: 435px !important
+
 @media(max-width: 475px)
 	body
 		text-size-adjust: 100%
@@ -583,9 +603,15 @@
 	.chocoHour-img
 		height: 150px
 
+	.chef-carousel__item
+		width: 395px !important
+
 @media(max-width: 425px)
 	.interior-slide__img
 		height: 260px
+
+	.chef-carousel__item
+		width: 330px !important
 
 @media(max-width: 380px)
 	.promo-top__shedule
@@ -599,3 +625,6 @@
 @media(max-width: 360px)
 	.interior-slide__img
 		height: 220px
+	
+	.chef-carousel__item
+		width: 290px !important
