@@ -208,4 +208,15 @@ $(document).ready(function(){
 	onScroll();
 	$(document).on("scroll", onScroll);
 
+	$('.chef-carousel').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  infinite: true,
+		dots: true,
+		arrows: false,
+	  variableWidth: true,
+	  // fade: true,
+		appendDots: $('.chef-dots')
+	});
+
 });

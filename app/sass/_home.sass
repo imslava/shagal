@@ -132,18 +132,19 @@
 		top: 0
 		left: 150px
 		bottom: 0
-	.container
-		@include flex
-		align-items: center
+	// .container
+	// 	@include flex
+	// 	align-items: center
 	&-text
 		width: 510px
 		@include flex
 		.title
 			margin-bottom: 68px
+	.text
+		margin-left: 50px
 	&-quote
 		width: 460px
 		position: relative
-		margin-left: 50px
 		&:before
 			content: ''
 			position: absolute
@@ -192,6 +193,53 @@
 			&:nth-child(3)
 				zoom: .84
 				left: 62px
+	&-control
+		@include flex
+		align-items: center
+		width: 100%
+	&-prev,
+	&-next
+		width: 14px
+		height: 14px
+		display: block
+		background-repeat: no-repeat
+		background-image: url(../img/src/svg/chef-prev.svg)
+		cursor: pointer
+		margin-right: 10px
+	&-next
+		transform: rotate(180deg)
+		margin-left: 10px
+		margin-right: 0
+	&-carousel
+		.slick-list
+			overflow: initial
+		&__item
+			display: flex !important
+			align-items: center
+		.slick-slide
+			margin-right: 1000px
+	&-dots
+		.slick-dots
+			@include flex
+			align-items: center
+			li
+				margin: 0 10px
+				button
+					padding: 0
+					margin: 0
+					font-size: 0
+					border: 0
+					width: 12px
+					height: 12px
+					background: #ffffff
+					border-radius: 100%
+					border: 2px solid #2E1113
+					display: block
+					cursor: pointer
+				&.slick-active button
+					background: #2e1113
+
+
 
 .interior
 	padding: 120px 0 40px

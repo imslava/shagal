@@ -121,7 +121,7 @@ body
 			margin-top: 21px
 	&-content
 		width: 100%
-		padding: 60px 0
+		padding: 60px 0 120px
 		flex-grow: 1
 		@include flex
 		align-items: center
@@ -189,6 +189,22 @@ body
 			background-size: cover
 			background-repeat: no-repeat
 			background-position: center center
+	&-contacts
+		mask-image: none
+		background: #3c2a39
+		&:before
+			display: none
+		.contacts-info
+			width: 400px
+			margin-left: 0
+		.contacts-text
+			width: 375px
+			margin-top: 50px
+		.promo-content__text
+			@include flex
+			align-items: flex-start
+			h1
+				width: 100%
 
 .cta-fixed
 	position: fixed
@@ -226,6 +242,7 @@ body
 	background: linear-gradient(90deg, #261817 0%, #412D26 27.91%, #1F1110 51.21%, #1F1110 92.18%)
 	color: #ffffff
 	position: relative
+	overflow: hidden
 	&:before
 		content: ''
 		position: absolute
@@ -236,11 +253,19 @@ body
 		background: url(../img/src/svg/chocohour-top.svg) no-repeat top center
 	.container
 		@include flex
-		align-items: center
+		align-items: flex-start
 	&-text
 		width: 100%
 		max-width: 540px
 		margin-left: auto
+	&-img
+		width: calc(100% - 540px)
+		position: relative
+		img
+			position: absolute
+			top: 0
+			right: 30px
+
 	&-row
 		@include flex
 		align-items: center
@@ -259,6 +284,8 @@ body
 	-webkit-mask-image: url(../img/src/svg/features-mask.svg)
 	mask-composite: add
 	margin-top: -50px
+	position: relative
+	z-index: 7
 	&-slider
 		margin-top: 58px
 		.slick-list
