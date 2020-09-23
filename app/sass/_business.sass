@@ -1,0 +1,388 @@
+.business
+  //section
+  &-promo
+    padding: 150px 0 180px
+    &__text
+      max-width: 590px
+      position: relative
+      p:last-child
+        margin-bottom: 0
+    &__img
+      width: 875px
+      height: 520px
+      position: absolute
+      top: 0
+      bottom: 0
+      margin: auto 0
+      right: -940px
+      background-color: #eeeeee
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      -webkit-mask-image: url(../img/src/svg/business-mask.svg)
+      mask-composite: add
+      mask-position: top center
+      mask-size: cover
+  //section
+  &-event
+    padding: 100px 0 110px
+    text-align: center
+    h2
+      font-size: 40px
+      line-height: 1.25
+      color: #BD0031
+      font-weight: 900
+      max-width: 920px
+      margin: 0 auto
+    &__row
+      @include flex
+      justify-content: space-around
+      align-items: flex-start
+      margin-top: 30px
+    &__item
+      width: 230px
+      font-size: 20px
+      font-weight: 700
+      margin-top: 45px
+      p
+        margin-top: 10px
+  // section
+  &-tech
+    .container
+      @include flex
+      align-items: flex-start
+    &__text
+      margin-left: auto
+      max-width: 620px
+      position: relative
+      h2
+        font-size: 40px
+        line-height: 1.25
+        color: #BD0031
+        font-weight: 900
+      b
+        display: block
+        margin-top: 45px
+        font-weight: 700
+        max-width: 420px
+        line-height: 1.3
+        font-size: 20px
+    &__list
+      @include flex
+      align-items: flex-start
+      justify-content: space-between
+      font-size: 18px
+      line-height: 1.4
+      margin-top: 30px
+      ul
+        width: 48%
+        padding-left: 20px
+        li
+          list-style-type: disc
+    &__img
+      width: 900px
+      height: 640px
+      position: absolute
+      top: -50px
+      left: -975px
+      background-color: #eeeeee
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      -webkit-mask-image: url(../img/src/svg/business-mask-2.svg)
+      mask-composite: add
+      mask-position: top center
+      mask-size: cover
+    &__line
+      margin-top: 60px
+  // section
+  &-hall
+    padding-top: 155px
+    h2
+      color: #BD0031
+      text-align: center
+    .text
+      max-width: 1000px
+      margin: -20px auto 0
+      text-align: center
+    &__carousel
+      margin-top: 50px
+      .slick-list
+        overflow: initial
+      .slick-active + .slick-slide .business-hall__item,
+      .slick-active .business-hall__item
+        opacity: 1
+    &__item
+      width: 570px !important
+      height: 390px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      background-color: #eeeeee
+      position: relative
+      margin-right: 20px
+      opacity: 0.5
+      transition: .3s
+      overflow: hidden
+    &__bottom
+      position: absolute
+      bottom: 20px
+      left: 20px
+      right: 20px
+      background: rgba(255, 255, 255, 0.9)
+      box-shadow: 0px 16px 32px rgba(8, 8, 8, 0.2)
+      @include flex
+      align-items: center
+      padding: 20px
+      transition: .3s
+      &.click
+        bottom: -620px
+      span
+        width: calc(100% - 170px)
+        padding-right: 20px
+        display: block
+        .business-hall__cta-place
+          width: 100%
+          padding-left: 0
+          margin-top: 5px
+      h4
+        font-weight: 900
+        color: #555555
+        font-size: 30px
+        line-height: 1.15
+    &__btn
+      width: 170px
+      height: 49px
+      display: block
+      @include flex
+      align-items: center
+      justify-content: center
+      background: #A60A3D
+      border: 2px solid #A60A3D
+      color: #ffffff
+      font-size: 14px
+      font-weight: 700
+      transition: .3s
+      &:hover
+        background: #ffffff
+        color: #a60a3d
+    &__content
+      position: absolute
+      bottom: -520px
+      left: 20px
+      right: 20px
+      background: rgba(255, 255, 255, 0.9)
+      box-shadow: 0px 16px 32px rgba(8, 8, 8, 0.2)
+      padding: 20px
+      transition: .3s
+      &.click
+        bottom: 20px
+      h4
+        color: #555555
+        font-size: 30px
+        font-weight: 900
+        margin-bottom: 10px
+    &__text
+      font-size: 14px
+      line-height: 22px
+      height: 130px
+      padding-right: 20px
+      -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%)
+    &__cta
+      @include flex
+      align-items: center
+      margin-top: 20px
+      &-place
+        width: calc(100% - 170px)
+        padding-left: 25px
+        @include flex
+        align-items: center
+        font-size: 12px
+        color: #333333
+        img
+          display: block
+          margin-right: 10px
+    &__close
+      position: absolute
+      top: 25px
+      right: 18px
+      width: 8px
+      height: 8px
+      background: url(../img/src/svg/close-hall.svg) no-repeat
+      z-index: 5
+      cursor: pointer
+  // section
+  &-packet
+    padding-top: 120px
+    h2
+      color: #BD0031
+      text-align: center
+    .text
+      max-width: 740px
+      margin: -20px auto 0
+      text-align: center
+    &__carousel
+      margin-top: 50px
+      .slick-list
+        overflow: initial
+      .slick-active + .slick-slide .business-packet__item,
+      .slick-active .business-packet__item
+        opacity: 1
+    &__item
+      width: 570px !important
+      height: 390px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      background-color: #eeeeee
+      position: relative
+      margin-right: 20px
+      opacity: 0.5
+      transition: .3s
+    &__bottom
+      position: absolute
+      bottom: 20px
+      left: 20px
+      right: 20px
+      background: rgba(255, 255, 255, 0.9)
+      box-shadow: 0px 16px 32px rgba(8, 8, 8, 0.2)
+      @include flex
+      align-items: center
+      padding: 20px
+      h3
+        width: 100%
+        font-size: 30px
+        margin-bottom: 15px
+      p
+        width: 150px
+        font-size: 12px
+      a
+        font-size: 12px
+        color: #333333
+  // section
+  &-menu
+    padding-top: 175px
+    .container
+      @include flex
+      align-items: flex-start
+    &__text
+      max-width: 570px
+      position: relative
+      margin-left: auto
+      .title
+        margin-bottom: 23px
+        color: #A60A3D
+    &__img
+      position: absolute
+      top: -65px
+      left: -950px
+      width: 890px
+      height: 615px
+      background-color: #eeeeee
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      -webkit-mask-image: url(../img/src/svg/wedding-mask.svg)
+      mask-composite: add
+      mask-position: top center
+    &__list
+      li
+        margin-top: 20px
+        a
+          @include flex
+          align-items: center
+          font-size: 20px
+          color: #2e1113
+          text-decoration: underline !important
+          img
+            display: block
+            margin-right: 15px
+          p
+            flex: 1
+    &__line
+      margin: 90px 0 0 0
+  // section
+  &-share
+    padding-top: 115px
+    .title
+      color: #555555
+    &__row
+      @include flex
+      align-items: center
+    &__contact
+      width: 370px
+      li
+        @include flex
+        align-items: center
+        font-weight: 700
+        font-size: 25px
+        margin-top: 20px
+        &:first-child
+          margin-top: 0
+        img
+          display: block
+          margin-right: 15px 
+    &__text
+      width: calc(100% - 370px)
+      background: rgba(203, 203, 144, 0.4)
+      border-radius: 5px
+      padding: 30px
+      @include flex
+      align-items: center
+      p
+        width: calc(100% - 375px)
+        padding-right: 30px
+        margin: 0
+        color: #333333
+    &__btn
+      width: 375px
+      height: 90px
+      background: #a60a3d
+      border-radius: 10px
+      @include flex
+      align-items: center
+      justify-content: center
+      color: #ffffff
+      font-size: 29px
+      font-weight: 700
+      border: 2px solid #a60a3d
+      transition: .3s
+      &:hover
+        background: #ffffff
+        color: #a60a3d
+  // section
+  &-group
+    padding: 230px 0 180px
+    &__text
+      max-width: 500px
+      position: relative
+      .title
+        margin-bottom: 23px
+        color: #555555
+    &__img
+      position: absolute
+      top: -90px
+      right: -970px
+      width: 900px
+      height: 640px
+      background-color: #eeeeee
+      -webkit-mask-image: url(../img/src/svg/business-mask-3.svg)
+      mask-composite: add
+      mask-position: top center
+    &__btn
+      width: 375px
+      height: 90px
+      background: #a60a3d
+      border-radius: 10px
+      @include flex
+      align-items: center
+      justify-content: center
+      color: #ffffff
+      font-size: 29px
+      font-weight: 700
+      margin-top: 50px
+      border: 2px solid #a60a3d
+      transition: .3s
+      &:hover
+        background: #ffffff
+        color: #a60a3d

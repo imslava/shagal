@@ -1,0 +1,454 @@
+.wedding
+  &-line
+    width: 45px
+    height: 2px
+    opacity: .3
+    background: #bd0031
+    margin: -6px 0 28px
+  // section
+  &-movenpick
+    padding-top: 140px
+    &__text
+      max-width: 590px
+      position: relative
+      h2
+        font-size: 40px
+        line-height: 1.25
+        color: #BD0031
+        font-weight: 900
+        margin-bottom: 30px
+    &__img
+      position: absolute
+      top: -75px
+      right: -930px
+      width: 890px
+      height: 615px
+      background-color: #eeeeee
+      -webkit-mask-image: url(../img/src/svg/wedding-mask.svg)
+      mask-composite: add
+      mask-position: top center
+    &__contact
+      margin-top: 40px
+      li
+        @include flex
+        align-items: center
+        font-weight: 700
+        font-size: 25px
+        margin-top: 20px
+        img
+          display: block
+          margin-right: 15px
+    &__line
+      margin: 75px 0 0 -245px
+  //section
+  &-packet
+    padding-top: 110px
+    .title, h3.text
+      text-align: center
+      max-width: 740px
+      margin: 0 auto
+    .title
+      color: #555555
+    h3.text
+      margin-top: 10px
+    &__carousel
+      margin-top: 50px
+      .slick-list
+        overflow: initial
+      .slick-active + .slick-slide .wedding-packet__item,
+      .slick-active .wedding-packet__item
+        opacity: 1
+    &__item
+      width: 570px !important
+      height: 390px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      background-color: #eeeeee
+      position: relative
+      margin-right: 20px
+      opacity: 0.5
+      transition: .3s
+    &__bottom
+      position: absolute
+      bottom: 20px
+      left: 20px
+      right: 20px
+      background: rgba(255, 255, 255, 0.9)
+      box-shadow: 0px 16px 32px rgba(8, 8, 8, 0.2)
+      @include flex
+      align-items: center
+      padding: 20px
+      h4
+        font-weight: 900
+        color: rgba(51, 51, 51, 0.6)
+        font-size: 30px
+        line-height: 1.15
+        width: calc(100% - 170px)
+        padding-right: 20px
+      a
+        width: 170px
+        height: 49px
+        display: block
+        @include flex
+        align-items: center
+        justify-content: center
+        background: #A60A3D
+        border: 2px solid #A60A3D
+        color: #ffffff
+        font-size: 14px
+        font-weight: 700
+        transition: .3s
+        &:hover
+          background: #ffffff
+          color: #a60a3d
+  // section
+  &-menu
+    padding-top: 175px
+    .container
+      @include flex
+      align-items: flex-start
+    &__text
+      max-width: 570px
+      position: relative
+      margin-left: auto
+      .title
+        margin-bottom: 23px
+        color: #555555
+    &__img
+      position: absolute
+      top: -65px
+      left: -950px
+      width: 890px
+      height: 615px
+      background-color: #eeeeee
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      -webkit-mask-image: url(../img/src/svg/wedding-mask.svg)
+      mask-composite: add
+      mask-position: top center
+    &__list
+      max-width: 420px
+      li
+        margin-top: 20px
+        a
+          @include flex
+          align-items: center
+          font-size: 20px
+          color: #2e1113
+          img
+            display: block
+            margin-right: 15px
+          p
+            flex: 1
+    &__line
+      margin: 90px 0 0 -840px
+  //section
+  &-get
+    padding-top: 85px
+    &__text
+      max-width: 570px
+      position: relative
+      .title
+        margin-bottom: 23px
+        color: #555555
+    &__img
+      position: absolute
+      top: -90px
+      right: -930px
+      width: 890px
+      height: 615px
+      background-color: #eeeeee
+      -webkit-mask-image: url(../img/src/svg/wedding-mask.svg)
+      mask-composite: add
+      mask-position: top center
+    &__btn
+      width: 375px
+      height: 90px
+      background: #a60a3d
+      border-radius: 10px
+      @include flex
+      align-items: center
+      justify-content: center
+      color: #ffffff
+      font-size: 29px
+      font-weight: 700
+      margin-top: 50px
+      border: 2px solid #a60a3d
+      transition: .3s
+      &:hover
+        background: #ffffff
+        color: #a60a3d
+    &__line
+      margin: 55px 0 0 625px 
+  // section
+  &-hall
+    padding-top: 70px
+    .title
+      text-align: center
+      color: #555555
+    &__carousel
+      margin-top: 50px
+      .slick-list
+        overflow: initial
+      .slick-active + .slick-slide .wedding-hall__item,
+      .slick-active .wedding-hall__item
+        opacity: 1
+    &__item
+      width: 570px !important
+      height: 390px
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      background-color: #eeeeee
+      position: relative
+      margin-right: 20px
+      opacity: 0.5
+      transition: .3s
+      overflow: hidden
+    &__bottom
+      position: absolute
+      bottom: 20px
+      left: 20px
+      right: 20px
+      background: rgba(255, 255, 255, 0.9)
+      box-shadow: 0px 16px 32px rgba(8, 8, 8, 0.2)
+      @include flex
+      align-items: center
+      padding: 20px
+      transition: .3s
+      &.click
+        bottom: -620px
+      span
+        width: calc(100% - 170px)
+        padding-right: 20px
+        display: block
+        .wedding-hall__cta-pdf
+          width: 100%
+          padding-left: 0
+          margin-top: 5px
+      h4
+        font-weight: 900
+        color: #555555
+        font-size: 30px
+        line-height: 1.15
+    &__btn
+      width: 170px
+      height: 49px
+      display: block
+      @include flex
+      align-items: center
+      justify-content: center
+      background: #A60A3D
+      border: 2px solid #A60A3D
+      color: #ffffff
+      font-size: 14px
+      font-weight: 700
+      transition: .3s
+      &:hover
+        background: #ffffff
+        color: #a60a3d
+    &__content
+      position: absolute
+      bottom: -520px
+      left: 20px
+      right: 20px
+      background: rgba(255, 255, 255, 0.9)
+      box-shadow: 0px 16px 32px rgba(8, 8, 8, 0.2)
+      padding: 20px
+      transition: .3s
+      &.click
+        bottom: 20px
+      h4
+        color: #555555
+        font-size: 30px
+        font-weight: 900
+        margin-bottom: 10px
+    &__text
+      font-size: 14px
+      line-height: 22px
+      height: 130px
+      padding-right: 20px
+      -webkit-mask: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%)
+    &__cta
+      @include flex
+      align-items: center
+      margin-top: 20px
+      &-pdf
+        width: calc(100% - 170px)
+        padding-left: 25px
+        @include flex
+        align-items: center
+        font-size: 12px
+        color: #333333
+        img
+          display: block
+          margin-right: 10px
+    &__close
+      position: absolute
+      top: 25px
+      right: 18px
+      width: 8px
+      height: 8px
+      background: url(../img/src/svg/close-hall.svg) no-repeat
+      z-index: 5
+      cursor: pointer
+  // section
+  &-desserts
+    padding-top: 220px
+    .container
+      @include flex
+      align-items: flex-start
+    &__text
+      max-width: 550px
+      position: relative
+      margin-left: auto
+      .title
+        margin-bottom: 23px
+        color: #555555
+    &__img
+      position: absolute
+      top: -165px
+      left: -1150px
+      width: 1080px
+      height: 780px
+      background-color: #eeeeee
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      -webkit-mask-image: url(../img/src/svg/wedding-mask-2.svg)
+      mask-composite: add
+      mask-position: top center
+  // section
+  &-cocktails
+    padding-top: 360px
+    &__text
+      max-width: 550px
+      position: relative
+      .title
+        margin-bottom: 23px
+        color: #555555
+    &__img
+      position: absolute
+      top: -140px
+      right: -1120px
+      width: 1080px
+      height: 780px
+      background-color: #eeeeee
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      -webkit-mask-image: url(../img/src/svg/wedding-mask-3.svg)
+      mask-composite: add
+      mask-position: top center
+    &__line
+      margin: 60px 0 0 -245px
+  //section
+  &-bride
+    padding-top: 135px
+    .container
+      @include flex
+      align-items: flex-start
+    &__text
+      max-width: 570px
+      position: relative
+      margin-left: auto
+      .title
+        margin-bottom: 23px
+        color: #555555
+      .text
+        max-width: 490px
+    &__img
+      position: absolute
+      top: -90px
+      left: -880px
+      width: 825px
+      height: 915px
+      background-color: #eeeeee
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      -webkit-mask-image: url(../img/src/svg/wedding-mask-4.svg)
+      mask-composite: add
+      mask-position: top center
+    &__quote
+      @include flex
+      align-items: flex-start
+      &-img
+        width: 65px
+        height: 65px
+        border-radius: 100%
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        border: 3px solid #4D1C1C
+        box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25)
+        margin-top: 5px
+      &-text
+        width: calc(100% - 65px)
+        padding-left: 20px
+        font-size: 17px
+        line-height: 25px
+        font-style: italic
+        color: #555555
+        p:last-child
+          margin-top: 5px
+    &__line
+      margin: 100px 0 0 45px
+  // section
+  &-details
+    padding: 170px 0
+    &__text
+      max-width: 530px
+      position: relative
+      .title
+        margin-bottom: 23px
+        color: #555555
+    &__img
+      position: absolute
+      top: -120px
+      right: -810px
+      width: 740px
+      height: 820px
+      background-color: #eeeeee
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      -webkit-mask-image: url(../img/src/svg/wedding-mask-5.svg)
+      mask-composite: add
+      mask-position: top center
+      mask-size: cover
+    &__quote
+      @include flex
+      align-items: flex-start
+      margin-top: 35px
+      &-img
+        width: 95px
+        height: 95px
+        border-radius: 100%
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        border: 3px solid #4D1C1C
+        box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25)
+        margin-top: 5px
+      &-text
+        width: calc(100% - 95px)
+        padding-left: 20px
+        font-size: 17px
+        line-height: 25px
+        font-style: italic
+        color: #555555
+        p:last-child
+          margin-top: 5px
+
+
+.mCSB_scrollTools .mCSB_draggerRail
+  width: 5px
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+  background: #BD0031 !important
+  &:hover, &:active, &:focus
+    background: #BD0031 !important
+.mCSB_scrollTools .mCSB_draggerRail
+  background: rgba(189,0,49,0.3)

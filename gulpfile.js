@@ -39,6 +39,7 @@ function scripts() {
 		'app/js/jquery.youtube-background.js',
 		'node_modules/flatpickr/dist/flatpickr.min.js',
 		'node_modules/flatpickr/dist/l10n/ru.js',
+		'app/js/jquery.mCustomScrollbar.js',
 		'app/js/app.js',
 		])
 	.pipe(concat('app.min.js'))
@@ -55,6 +56,7 @@ function styles() {
 		'app/css/slick.css',
 		'app/css/animate.min.css',
 		'app/css/scroll-to-fancy.min.css',
+		'app/css/jquery.mCustomScrollbar.min.css',
 		'node_modules/flatpickr/dist/flatpickr.min.css',
 		'node_modules/flatpickr/dist/themes/airbnb.css',
 		'app/sass/main.sass',

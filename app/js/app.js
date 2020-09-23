@@ -227,4 +227,60 @@ $(document).ready(function(){
 	  $('.chef-carousel').slick("prev");
 	});
 
+	$('.wedding-packet__carousel').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  infinite: false,
+	  dots: false,
+	  arrows: false,
+	  variableWidth: true,
+	  focusOnSelect: true
+	});
+
+	$('.wedding-hall__carousel').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  infinite: false,
+	  dots: false,
+	  arrows: false,
+	  variableWidth: true,
+	  focusOnSelect: true
+	});
+
+	$('.business-hall__carousel').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  infinite: false,
+	  dots: false,
+	  arrows: false,
+	  variableWidth: true,
+	  focusOnSelect: true
+	});
+
+	$('.business-packet__carousel').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  infinite: false,
+	  dots: false,
+	  arrows: false,
+	  variableWidth: true,
+	  focusOnSelect: true
+	});
+
+
+	$('.js-open-hall, .js-close-hall').click(function(){
+		var id = $(this).data('id');
+		$('.wedding-hall__item[data-id="'+id+'"] .wedding-hall__bottom').toggleClass('click');
+		$('.wedding-hall__item[data-id="'+id+'"] .wedding-hall__content').toggleClass('click');
+	});
+
+	$('.js-open-bhall, .js-close-bhall').click(function(){
+		var id = $(this).data('id');
+		$('.business-hall__item[data-id="'+id+'"] .business-hall__bottom').toggleClass('click');
+		$('.business-hall__item[data-id="'+id+'"] .business-hall__content').toggleClass('click');
+	});
+
+	$(".wedding-hall__text").mCustomScrollbar();
+	$(".business-hall__text").mCustomScrollbar();
+
 });
