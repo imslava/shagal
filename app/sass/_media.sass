@@ -113,19 +113,28 @@
 		line-height: 1.3
 
 	.chocoHour
-		padding-bottom: 400px
+		padding-bottom: 100px
 		height: auto
 		&-text
 			max-width: 100%
+			@include flex
+			align-items: flex-start
+		.title
+			order: -1
 	.chocoHour-img
 		width: 100%
-		height: 300px
-		order: 1
-		margin-top: 50px
+		margin-bottom: 30px
 		img
 			width: 100%
+			position: relative
+			margin: 0 auto
 			left: 0
 			right: 0
+			top: 0
+			bottom: 0
+	.chocoHour-row
+		width: 100%
+
 	.features
 		padding: 94px 0 109px
 
@@ -174,6 +183,11 @@
 @media(max-width: 768px)
 	.container
 		max-width: 576px
+
+	.promo
+		mask-image: url(../img/src/svg/promo-wave-2.svg)
+		mask-position: bottom -1px right
+		mask-size: 100%
 
 	.promo-top__phone, .promo-top__social, .btn-promo, .blot-4
 		display: none
@@ -251,7 +265,11 @@
 		right: 8px
 
 	.interior
-		padding: 0 0 80px
+		padding: 30px 0 80px
+	.bigMenu
+		height: 600px
+		mask-size: cover
+		mask-position: right -400px center
 	.bigMenu-item__link
 		width: 100%
 	.bigMenu-item__link-next
@@ -259,13 +277,21 @@
 	.btn-bigMenu
 		width: 100%
 		margin-top: 30px
+		height: 60px
+		font-size: 18px
+		line-height: 56px
+	.bigMenu-container
+		bottom: 50px
+
 	.bigMenu-item
-		padding-bottom: 230px
+		padding-bottom: 100px
 	.bigMenu-item__name
 		text-align: left
 
 	.tryFirst
 		padding: 80px 0
+	.tryFirst-item
+		margin-right: 15px
 
 	.features-item
 		width: 500px !important
@@ -418,7 +444,7 @@
 		margin-right: 30px
 
 	.bigMenu-item
-		padding: 45px 0 220px
+		padding-top: 45px
 
 	.features-item
 		width: 400px!important
@@ -488,7 +514,8 @@
 		height: 360px	
 
 	.chocoHour
-		padding-bottom: 140px
+		padding-bottom: 100px
+		padding-top: 80px
 		height: auto
 	.btn-chocoHour
 		width: 100%
@@ -498,6 +525,9 @@
 
 	.chef-carousel__item
 		width: 435px !important
+
+	.blot-2
+		top: -500px
 
 @media(max-width: 475px)
 	body
@@ -600,11 +630,32 @@
 		margin-left: 0
 		font-size: 14px
 
-	.chocoHour-img
-		height: 150px
-
 	.chef-carousel__item
 		width: 395px !important
+
+	.popup
+		padding: 30px 15px 30px
+	.popup .subtitle
+		font-size: 26px
+		margin-bottom: 10px
+		line-height: 1.3
+	.popup .text
+		line-height: 1.3
+	.popup form
+		margin: 15px 0 20px
+	.popup label
+		font-size: 14px
+	.input
+		min-height: 60px
+		height: 60px
+		font-size: 14px
+		margin-bottom: 15px
+		line-height: 56px
+	.btn-popup
+		height: 60px
+		font-size: 18px
+		line-height: initial
+		
 
 @media(max-width: 425px)
 	.interior-slide__img
