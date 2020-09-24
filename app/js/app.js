@@ -283,4 +283,13 @@ $(document).ready(function(){
 	$(".wedding-hall__text").mCustomScrollbar();
 	$(".business-hall__text").mCustomScrollbar();
 
+	wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 200,
+    mobile: true,
+    live: true
+	})
+	wow.init();
+
 });

@@ -40,6 +40,7 @@ function scripts() {
 		'node_modules/flatpickr/dist/flatpickr.min.js',
 		'node_modules/flatpickr/dist/l10n/ru.js',
 		'app/js/jquery.mCustomScrollbar.js',
+		'app/js/wow.min.js',
 		'app/js/app.js',
 		])
 	.pipe(concat('app.min.js'))
