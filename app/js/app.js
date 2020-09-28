@@ -292,4 +292,27 @@ $(document).ready(function(){
 	})
 	wow.init();
 
+
+	function resizeItem(){
+		$('.wedding-movenpick__img, .wedding-menu__img, .wedding-get__img, .wedding-desserts__img, .wedding-cocktails__img, .wedding-bride__img, .wedding-details__img, .business-promo__img, .business-tech__img, .business-menu__img, .business-group__img').is(function() {
+			var item = $(this),
+					width = parseInt(item.css('width')),					
+					scale = $('.container').width() / width;
+			item.css('zoom', scale);
+		});
+	}
+
+	if($(window).width() < 768){
+		$(window).resize(resizeItem);
+		$(document).ready(resizeItem);
+	}
+	
+	$('.promo-top__lang li').click(function(){
+		$('.promo-top__lang li').removeClass('active');
+		$(this).addClass('active');
+
+		var lang = $(this).text();
+		console.log(lang);
+	});
+
 });

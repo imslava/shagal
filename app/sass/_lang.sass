@@ -1,0 +1,44 @@
+.promo-top__lang
+  @include flex
+  align-items: center
+  margin-left: auto
+  position: relative
+  z-index: 10
+  margin-right: 20px
+  margin-top: 14px
+  li
+    font-size: 24px
+    display: block
+    font-weight: 900
+    color: #ffffff
+    opacity: 0.4
+    transition: .3s
+    margin-right: 20px
+    cursor: pointer
+    &.active
+      opacity: 1
+      &:hover
+        opacity: 1
+    &:hover
+      opacity: 0.5
+
+@media(max-width: 1200px)
+  .promo-top__lang
+    margin: 0
+    li:last-child
+      margin-right: 0
+  
+@media(max-width: 768px)
+  .promo-top__burger
+    order: 1
+  .promo-top__shedule
+    order: 2
+
+@media(max-width: 425px)
+  .promo-top__lang
+    order: 1
+    width: 100%
+    margin-top: 15px
+    li
+      font-size: 18px
+      margin-right: 15px

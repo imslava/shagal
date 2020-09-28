@@ -242,8 +242,6 @@
 				&.slick-active button
 					background: #2e1113
 
-
-
 .interior
 	padding: 120px 0 40px
 	position: relative
@@ -256,6 +254,26 @@
 		width: 410px
 		right: 0
 		top: 145px
+	&-full
+		position: relative
+		display: inline-block
+		font-size: 20px
+		line-height: 33px
+		border-bottom: 1px solid #666
+		color: #666666
+		font-weight: 300
+		left: 50px
+		cursor: pointer
+		z-index: 1000
+		&:before
+			content: ''
+			width: 43px
+			height: 24px
+			background: url(../img/src/svg/interior-full.svg) no-repeat center center
+			position: absolute
+			display: block
+			top: 4px
+			left: -50px
 	&-slide
 		@include flex
 		align-items: flex-start
