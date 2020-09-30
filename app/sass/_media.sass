@@ -152,12 +152,11 @@
 		margin: 0
 		position: relative
 		order: -1
-		img
+		.chef-image
 			&:nth-child(2), &:nth-child(3)
 				display: none
 			&:first-child
 				margin: 0 auto
-				width: 60%
 				position: relative
 
 	.chef-text
@@ -391,6 +390,9 @@
 	.chef-carousel__item
 		width: 546px !important
 
+	.chef-photo
+		zoom: .7
+
 @media(max-width: 576px)
 	.container
 		max-width: 475px
@@ -424,10 +426,6 @@
 
 	.philosophy-text	
 		padding: 60px 0 80px
-
-	.chef-photo img:first-child
-		width: 100%
-		max-width: 320px
 
 	.chef-text
 		margin-top: 40px
@@ -528,6 +526,9 @@
 
 	.blot-2
 		top: -500px
+
+	.chef-photo
+		zoom: .7
 
 @media(max-width: 475px)
 	body
@@ -655,6 +656,9 @@
 		height: 60px
 		font-size: 18px
 		line-height: initial
+
+	.chef-photo
+		zoom: .6
 		
 
 @media(max-width: 425px)
@@ -664,6 +668,9 @@
 	.chef-carousel__item
 		width: 330px !important
 
+	.chef-photo
+		zoom: .55
+
 @media(max-width: 380px)
 	.promo-top__shedule
 		width: 190px
@@ -672,6 +679,10 @@
 			margin-top: 7px
 	.promo-top__rest
 		margin-top: -10px
+
+@media(max-width: 375px)
+	.chef-photo
+		zoom: .45
 
 @media(max-width: 360px)
 	.interior-slide__img

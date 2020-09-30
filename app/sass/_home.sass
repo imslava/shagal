@@ -142,6 +142,7 @@
 			margin-bottom: 68px
 	.text
 		margin-left: 50px
+		width: calc(100% - 50px)
 	&-quote
 		width: 460px
 		position: relative
@@ -164,6 +165,8 @@
 		padding: 0 41px 0 81px
 		margin-top: 42px
 		cursor: pointer
+		display: block
+		width: 230px
 		&:before
 			content: ''
 			position: absolute
@@ -177,25 +180,25 @@
 		position: relative
 		width: calc(100% - 510px - 72px)
 		margin-left: auto
-		img
-			display: block
-			position: absolute
-			margin: auto
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			&:first-child
-				position: relative
-				z-index: 1
-			&:nth-child(2)
-				zoom: .92
-				left: 32px
-				z-index: 2
-			&:nth-child(3)
-				zoom: .84
-				left: 62px
-				z-index: 3
+		// img
+		// 	display: block
+		// 	position: absolute
+		// 	margin: auto
+		// 	top: 0
+		// 	left: 0
+		// 	right: 0
+		// 	bottom: 0
+		// 	&:first-child
+		// 		position: relative
+		// 		z-index: 1
+		// 	&:nth-child(2)
+		// 		zoom: .92
+		// 		left: 32px
+		// 		z-index: 2
+		// 	&:nth-child(3)
+		// 		zoom: .84
+		// 		left: 62px
+		// 		z-index: 3
 	&-control
 		@include flex
 		align-items: center
@@ -241,7 +244,45 @@
 					cursor: pointer
 				&.slick-active button
 					background: #2e1113
-
+	&-image
+		width: 623px
+		height: 704px
+		background-color: #eeeeee
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		mask-image: url(../img/src/svg/chef-mask.svg)
+		mask-composite: add
+		mask-position: top left
+		mask-size: cover
+		display: block
+		position: absolute
+		margin: auto
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		&:first-child
+			position: relative
+			z-index: 1
+		&:nth-child(2)
+			zoom: .92
+			left: 32px
+			z-index: 2
+		&:nth-child(3)
+			zoom: .84
+			left: 62px
+			z-index: 3
+		&:before
+			content: ''
+			position: absolute
+			top: 0	
+			left: 0
+			right: 0
+			bottom: 0
+			background: url(../img/src/svg/chef-border.svg) no-repeat
+			background-size: cover
+		
 .interior
 	padding: 120px 0 40px
 	position: relative
